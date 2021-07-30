@@ -20,7 +20,7 @@ function kick($chat, $member) {
         "until_date" => time() + 60,
     );
     $data_string = json_encode($data);
-    $ch = curl_init('https://api.telegram.org/bot' . getenv('token') . '/kickChatMember');
+    $ch = curl_init('https://api.telegram.org/bot' . getenv('token') . '/banChatMember');
     curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
     curl_setopt($ch, CURLOPT_POSTFIELDS, $data_string);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
